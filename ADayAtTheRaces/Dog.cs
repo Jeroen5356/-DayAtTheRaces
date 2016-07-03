@@ -9,31 +9,25 @@ namespace ADayAtTheRaces
 {
     class Dog
     {
-        public int StartingPosition;
-        public int RacetrackLength;
-        public PictureBox MyPictureBox = null;
+        public int StartingPosition = 45;
+        public int RacetrackLength = 500;
+        public PictureBox MyPictureBox;
         public int Location = 0;
         public Random Randomiser;
-        public bool Race = true;
+        public bool Race;
+        public string LaneNumber;
 
-        public bool Run()
+        public void Run()
         {
-            if(MyPictureBox == null)
-            { 
-        
-                    int random = Randomiser.Next(5);
-                    Location += random;
-                    MyPictureBox.Left += Location + StartingPosition;
-                    
-                    
-                
-            }
-            
-           
+                Random random = new Random();
+                int paces = random.Next(0,30);
+                MyPictureBox.Left += paces;
+                Location = MyPictureBox.Left;
+                System.Threading.Thread.Sleep(50);
         }
         public void TakeStartingPositions()
         {
-            MyPictureBox.Left = 0;
+            MyPictureBox.Left = StartingPosition;
         }
     }
 }

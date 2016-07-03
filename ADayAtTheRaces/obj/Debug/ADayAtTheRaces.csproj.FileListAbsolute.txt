@@ -1,1 +1,10 @@
 C:\Users\driley\Documents\dylan\hfc#\projects\ADayAtTheRaces\ADayAtTheRaces\bin\Debug\ADayAtTheRaces.exe.config
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\bin\Debug\ADayAtTheRaces.exe.config
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\bin\Debug\ADayAtTheRaces.exe
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\bin\Debug\ADayAtTheRaces.pdb
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.Form1.resources
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.Properties.Resources.resources
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.exe
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.pdb
+C:\Users\User\Documents\Coding\c#\-DayAtTheRaces-master\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.csprojResolveAssemblyReference.cache
