@@ -37,18 +37,18 @@
             this.raceButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.varNameLabel = new System.Windows.Forms.Label();
             this.joesInfo = new System.Windows.Forms.Label();
             this.bobsInfo = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.betAmountUpDown = new System.Windows.Forms.NumericUpDown();
             this.betsButton = new System.Windows.Forms.Button();
             this.alsInfo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.alsRB = new System.Windows.Forms.RadioButton();
             this.bobsRB = new System.Windows.Forms.RadioButton();
-            this.joesRB = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.joesRB = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.betAmountUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,16 +130,14 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.varNameLabel);
             this.groupBox1.Controls.Add(this.joesInfo);
             this.groupBox1.Controls.Add(this.bobsInfo);
             this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.betAmountUpDown);
             this.groupBox1.Controls.Add(this.betsButton);
             this.groupBox1.Controls.Add(this.alsInfo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.alsRB);
-            this.groupBox1.Controls.Add(this.bobsRB);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(16, 274);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -161,15 +159,15 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Bets";
             // 
-            // label5
+            // varNameLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 153);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "name";
+            this.varNameLabel.AutoSize = true;
+            this.varNameLabel.Location = new System.Drawing.Point(8, 153);
+            this.varNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.varNameLabel.Name = "varNameLabel";
+            this.varNameLabel.Size = new System.Drawing.Size(43, 17);
+            this.varNameLabel.TabIndex = 14;
+            this.varNameLabel.Text = "name";
             // 
             // joesInfo
             // 
@@ -185,7 +183,7 @@
             // bobsInfo
             // 
             this.bobsInfo.AutoSize = true;
-            this.bobsInfo.Location = new System.Drawing.Point(327, 75);
+            this.bobsInfo.Location = new System.Drawing.Point(327, 69);
             this.bobsInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bobsInfo.Name = "bobsInfo";
             this.bobsInfo.Size = new System.Drawing.Size(46, 17);
@@ -216,13 +214,29 @@
             0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // numericUpDown2
+            // betAmountUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(211, 150);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(63, 22);
-            this.numericUpDown2.TabIndex = 8;
+            this.betAmountUpDown.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.betAmountUpDown.Location = new System.Drawing.Point(211, 150);
+            this.betAmountUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.betAmountUpDown.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.betAmountUpDown.Name = "betAmountUpDown";
+            this.betAmountUpDown.Size = new System.Drawing.Size(63, 22);
+            this.betAmountUpDown.TabIndex = 8;
+            this.betAmountUpDown.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.betAmountUpDown.ValueChanged += new System.EventHandler(this.betAmountUpDown_ValueChanged);
             // 
             // betsButton
             // 
@@ -233,11 +247,12 @@
             this.betsButton.TabIndex = 9;
             this.betsButton.Text = "bets";
             this.betsButton.UseVisualStyleBackColor = true;
+            this.betsButton.Click += new System.EventHandler(this.betsButton_Click);
             // 
             // alsInfo
             // 
             this.alsInfo.AutoSize = true;
-            this.alsInfo.Location = new System.Drawing.Point(327, 101);
+            this.alsInfo.Location = new System.Drawing.Point(327, 96);
             this.alsInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.alsInfo.Name = "alsInfo";
             this.alsInfo.Size = new System.Drawing.Size(46, 17);
@@ -257,42 +272,34 @@
             // alsRB
             // 
             this.alsRB.AutoSize = true;
-            this.alsRB.Location = new System.Drawing.Point(8, 98);
+            this.alsRB.Location = new System.Drawing.Point(10, 74);
             this.alsRB.Margin = new System.Windows.Forms.Padding(4);
             this.alsRB.Name = "alsRB";
-            this.alsRB.Size = new System.Drawing.Size(110, 21);
+            this.alsRB.Size = new System.Drawing.Size(92, 21);
             this.alsRB.TabIndex = 2;
             this.alsRB.TabStop = true;
-            this.alsRB.Text = "radioButton3";
+            this.alsRB.Text = "Als button";
             this.alsRB.UseVisualStyleBackColor = true;
+            this.alsRB.CheckedChanged += new System.EventHandler(this.alsRB_CheckedChanged);
             // 
             // bobsRB
             // 
             this.bobsRB.AutoSize = true;
-            this.bobsRB.Location = new System.Drawing.Point(8, 70);
+            this.bobsRB.Location = new System.Drawing.Point(10, 45);
             this.bobsRB.Margin = new System.Windows.Forms.Padding(4);
             this.bobsRB.Name = "bobsRB";
-            this.bobsRB.Size = new System.Drawing.Size(110, 21);
+            this.bobsRB.Size = new System.Drawing.Size(105, 21);
             this.bobsRB.TabIndex = 1;
             this.bobsRB.TabStop = true;
-            this.bobsRB.Text = "radioButton2";
+            this.bobsRB.Text = "Bobs button";
             this.bobsRB.UseVisualStyleBackColor = true;
-            // 
-            // joesRB
-            // 
-            this.joesRB.AutoSize = true;
-            this.joesRB.Location = new System.Drawing.Point(4, 23);
-            this.joesRB.Margin = new System.Windows.Forms.Padding(4);
-            this.joesRB.Name = "joesRB";
-            this.joesRB.Size = new System.Drawing.Size(74, 21);
-            this.joesRB.TabIndex = 0;
-            this.joesRB.TabStop = true;
-            this.joesRB.Text = "joesRB";
-            this.joesRB.UseVisualStyleBackColor = true;
+            this.bobsRB.CheckedChanged += new System.EventHandler(this.bobsRB_CheckedChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.joesRB);
+            this.groupBox2.Controls.Add(this.bobsRB);
+            this.groupBox2.Controls.Add(this.alsRB);
             this.groupBox2.Location = new System.Drawing.Point(4, 20);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -301,6 +308,19 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // joesRB
+            // 
+            this.joesRB.AutoSize = true;
+            this.joesRB.Location = new System.Drawing.Point(10, 20);
+            this.joesRB.Margin = new System.Windows.Forms.Padding(4);
+            this.joesRB.Name = "joesRB";
+            this.joesRB.Size = new System.Drawing.Size(74, 21);
+            this.joesRB.TabIndex = 0;
+            this.joesRB.TabStop = true;
+            this.joesRB.Text = "joesRB";
+            this.joesRB.UseVisualStyleBackColor = true;
+            this.joesRB.CheckedChanged += new System.EventHandler(this.joesRB_CheckedChanged);
             // 
             // label7
             // 
@@ -366,7 +386,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.betAmountUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -385,7 +405,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label bobsInfo;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown betAmountUpDown;
         private System.Windows.Forms.Button betsButton;
         private System.Windows.Forms.Label alsInfo;
         private System.Windows.Forms.Label label4;
@@ -394,7 +414,7 @@
         private System.Windows.Forms.RadioButton joesRB;
         private System.Windows.Forms.Label joesInfo;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label varNameLabel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

@@ -12,10 +12,23 @@ namespace ADayAtTheRaces
 {
     public partial class Form1 : Form
     {
+        Human[] guys = new Human[3];
+        Dog[] raceDogs = new Dog[4];
+        Bet[] placedBets = new Bet[3];
+        Human selected;
+        Dog ultimateWinner;
         public Form1()
         {
             InitializeComponent();
-            Human joe = new Human { Name = "joe", Cash = 50, MyLabel = joesInfo, MyRadioButton = joesRB };
+            
+            guys[0] = new Human() { Name = "Joe", Cash = 50, MyLabel = joesInfo, MyRadioButton = joesRB };
+            guys[1] = new Human() { Name = "Bob", Cash = 75, MyLabel = bobsInfo, MyRadioButton = bobsRB };
+            guys[2] = new Human() { Name = "Al", Cash = 45, MyLabel = alsInfo, MyRadioButton = alsRB };
+
+            raceDogs[0] = new Dog() { MyPictureBox = pictureBox1, LaneNumber = "1" };
+            raceDogs[1] = new Dog() { MyPictureBox = pictureBox2, LaneNumber = "2" };
+            raceDogs[2] = new Dog() { MyPictureBox = pictureBox3, LaneNumber = "3" };
+            raceDogs[3] = new Dog() { MyPictureBox = pictureBox4, LaneNumber = "4" };
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -40,19 +53,11 @@ namespace ADayAtTheRaces
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void raceButton_Click(object sender, EventArgs e)
-        {
-            string winner = "";
-            Dog[] raceDogs = new Dog[4];
-            raceDogs[0] = new Dog() { MyPictureBox = pictureBox1, LaneNumber = "1"};
-            raceDogs[1] = new Dog() { MyPictureBox = pictureBox2, LaneNumber = "2" };
-            raceDogs[2] = new Dog() { MyPictureBox = pictureBox3, LaneNumber = "3" };
-            raceDogs[3] = new Dog() { MyPictureBox = pictureBox4, LaneNumber = "4" };
-            
-                for (int y = 0; raceDogs[y].Location < raceDogs[y].RacetrackLength; y++)
+        public void raceButton_Click(object sender, EventArgs e)
+        { for (int y = 0; raceDogs[y].Location < raceDogs[y].RacetrackLength; y++)
                 {
                     raceDogs[y].Run();
                     if(y == 3)
@@ -62,7 +67,7 @@ namespace ADayAtTheRaces
                 }
             Dog compareDogs;
             Dog compareDogs2;
-            Dog ultimateWinner;
+            
             if (raceDogs[0].Location < raceDogs[1].Location)
                 compareDogs = raceDogs[1];
             else
@@ -78,13 +83,33 @@ namespace ADayAtTheRaces
                 ultimateWinner = compareDogs2;
 
             MessageBox.Show("The winning dog is in lane number" + ultimateWinner.LaneNumber + ".");
-                
-                 
+        }
 
+        private void joesRB_CheckedChanged(object sender, EventArgs e)
+        {
+            selected = guys[0];
+            varNameLabel.Text = guys[0].Name; 
+        }
 
+        private void bobsRB_CheckedChanged(object sender, EventArgs e)
+        {
+            selected = guys[1];
+            varNameLabel.Text = guys[1].Name;
+        }
 
+        private void alsRB_CheckedChanged(object sender, EventArgs e)
+        {
+            selected = guys[2];
+            varNameLabel.Text = guys[2].Name;
+        }
+        private void betAmountUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            selected.MyBet = (int)betAmountUpDown.Value;
+        }
 
-
+        private void betsButton_Click(object sender, EventArgs e)
+        {
+            selected.MyLabel = 
         }
     }
 }
