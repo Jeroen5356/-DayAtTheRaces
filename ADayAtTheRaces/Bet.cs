@@ -14,13 +14,20 @@ namespace ADayAtTheRaces
 
         public string GetDescription()
         {
-            return "description";
+            return Bettor + " bets " + Amount + " on dog in lane " + WhichDog;
         }
 
-        public int PayOut()
+        public int PayOut(Dog winner)
         {
-            int payout = 0;
-            return payout;
+            if(winner == WhichDog)
+            {
+                return Amount * 2;
+            }
+            else
+            {
+                return Amount * -2;
+            }
+            
         }
         
     }

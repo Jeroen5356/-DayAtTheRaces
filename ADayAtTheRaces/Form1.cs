@@ -15,6 +15,7 @@ namespace ADayAtTheRaces
         public Form1()
         {
             InitializeComponent();
+            Human joe = new Human { Name = "joe", Cash = 50, MyLabel = joesInfo, MyRadioButton = joesRB };
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

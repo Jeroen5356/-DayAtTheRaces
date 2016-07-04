@@ -38,16 +38,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.joesInfo = new System.Windows.Forms.Label();
+            this.bobsInfo = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.betsButton = new System.Windows.Forms.Button();
+            this.alsInfo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.alsRB = new System.Windows.Forms.RadioButton();
+            this.bobsRB = new System.Windows.Forms.RadioButton();
+            this.joesRB = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // raceTrack
@@ -130,16 +131,15 @@
             // 
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.joesInfo);
+            this.groupBox1.Controls.Add(this.bobsInfo);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.betsButton);
+            this.groupBox1.Controls.Add(this.alsInfo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.alsRB);
+            this.groupBox1.Controls.Add(this.bobsRB);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(16, 274);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -153,12 +153,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(327, 20);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 17);
+            this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 15;
-            this.label6.Text = "label6";
+            this.label6.Text = "Bets";
             // 
             // label5
             // 
@@ -166,34 +167,34 @@
             this.label5.Location = new System.Drawing.Point(8, 153);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 17);
+            this.label5.Size = new System.Drawing.Size(43, 17);
             this.label5.TabIndex = 14;
-            this.label5.Text = "label5";
+            this.label5.Text = "name";
             // 
-            // label1
+            // joesInfo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(327, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.joesInfo.AutoSize = true;
+            this.joesInfo.Location = new System.Drawing.Point(327, 42);
+            this.joesInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.joesInfo.Name = "joesInfo";
+            this.joesInfo.Size = new System.Drawing.Size(152, 17);
+            this.joesInfo.TabIndex = 10;
+            this.joesInfo.Text = "Joe hasn\'t made a bet.";
+            this.joesInfo.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // bobsInfo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(327, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "label2";
+            this.bobsInfo.AutoSize = true;
+            this.bobsInfo.Location = new System.Drawing.Point(327, 75);
+            this.bobsInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bobsInfo.Name = "bobsInfo";
+            this.bobsInfo.Size = new System.Drawing.Size(46, 17);
+            this.bobsInfo.TabIndex = 11;
+            this.bobsInfo.Text = "label2";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(379, 150);
+            this.numericUpDown1.Location = new System.Drawing.Point(454, 150);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             4,
@@ -223,25 +224,25 @@
             this.numericUpDown2.Size = new System.Drawing.Size(63, 22);
             this.numericUpDown2.TabIndex = 8;
             // 
-            // button1
+            // betsButton
             // 
-            this.button1.Location = new System.Drawing.Point(103, 146);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.betsButton.Location = new System.Drawing.Point(85, 146);
+            this.betsButton.Margin = new System.Windows.Forms.Padding(4);
+            this.betsButton.Name = "betsButton";
+            this.betsButton.Size = new System.Drawing.Size(100, 28);
+            this.betsButton.TabIndex = 9;
+            this.betsButton.Text = "bets";
+            this.betsButton.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // alsInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(327, 101);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "label3";
+            this.alsInfo.AutoSize = true;
+            this.alsInfo.Location = new System.Drawing.Point(327, 101);
+            this.alsInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.alsInfo.Name = "alsInfo";
+            this.alsInfo.Size = new System.Drawing.Size(46, 17);
+            this.alsInfo.TabIndex = 12;
+            this.alsInfo.Text = "label3";
             // 
             // label4
             // 
@@ -249,48 +250,49 @@
             this.label4.Location = new System.Drawing.Point(297, 153);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(149, 17);
             this.label4.TabIndex = 13;
-            this.label4.Text = "label4";
+            this.label4.Text = "pounds on dog in lane";
             // 
-            // radioButton3
+            // alsRB
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(8, 98);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(110, 21);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.alsRB.AutoSize = true;
+            this.alsRB.Location = new System.Drawing.Point(8, 98);
+            this.alsRB.Margin = new System.Windows.Forms.Padding(4);
+            this.alsRB.Name = "alsRB";
+            this.alsRB.Size = new System.Drawing.Size(110, 21);
+            this.alsRB.TabIndex = 2;
+            this.alsRB.TabStop = true;
+            this.alsRB.Text = "radioButton3";
+            this.alsRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // bobsRB
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(8, 70);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(110, 21);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.bobsRB.AutoSize = true;
+            this.bobsRB.Location = new System.Drawing.Point(8, 70);
+            this.bobsRB.Margin = new System.Windows.Forms.Padding(4);
+            this.bobsRB.Name = "bobsRB";
+            this.bobsRB.Size = new System.Drawing.Size(110, 21);
+            this.bobsRB.TabIndex = 1;
+            this.bobsRB.TabStop = true;
+            this.bobsRB.Text = "radioButton2";
+            this.bobsRB.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // joesRB
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(8, 42);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(110, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.joesRB.AutoSize = true;
+            this.joesRB.Location = new System.Drawing.Point(4, 23);
+            this.joesRB.Margin = new System.Windows.Forms.Padding(4);
+            this.joesRB.Name = "joesRB";
+            this.joesRB.Size = new System.Drawing.Size(74, 21);
+            this.joesRB.TabIndex = 0;
+            this.joesRB.TabStop = true;
+            this.joesRB.Text = "joesRB";
+            this.joesRB.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.joesRB);
             this.groupBox2.Location = new System.Drawing.Point(4, 20);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -365,6 +367,8 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,16 +383,16 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button raceButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label bobsInfo;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button betsButton;
+        private System.Windows.Forms.Label alsInfo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton alsRB;
+        private System.Windows.Forms.RadioButton bobsRB;
+        private System.Windows.Forms.RadioButton joesRB;
+        private System.Windows.Forms.Label joesInfo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
