@@ -35,3 +35,12 @@ C:\Users\Jeroen\odrive\Google Drive\github test\ADayAtTheRaces\obj\Debug\ADayAtT
 C:\Users\Jeroen\odrive\Google Drive\github test\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.Form1.resources
 C:\Users\Jeroen\odrive\Google Drive\github test\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.Properties.Resources.resources
 C:\Users\Jeroen\odrive\Google Drive\github test\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.csproj.GenerateResource.Cache
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\bin\Debug\ADayAtTheRaces.exe.config
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.exe
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.pdb
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\bin\Debug\ADayAtTheRaces.exe
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\bin\Debug\ADayAtTheRaces.pdb
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.csprojResolveAssemblyReference.cache
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.Form1.resources
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.Properties.Resources.resources
+C:\Users\Jeroen\Documents\GitHub\-DayAtTheRaces\ADayAtTheRaces\obj\Debug\ADayAtTheRaces.csproj.GenerateResource.Cache

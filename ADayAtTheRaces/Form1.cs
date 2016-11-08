@@ -78,9 +78,7 @@ namespace ADayAtTheRaces
             joesRB.Text = guys[0].Name + " has " + guys[0].Cash + " bucks";
             bobsRB.Text = guys[1].Name + " has " + guys[1].Cash + " bucks";
             alsRB.Text = guys[2].Name + " has " + guys[2].Cash + " bucks";
-
             
-
             //Place the dogs back to their starting positions
             for (int i = 1; i <= 4 ; i++)
             {

@@ -24,7 +24,7 @@ namespace ADayAtTheRaces
 
         public bool PlaceBet(int amount, Dog whichDog, Human bettor)
         {
-            if (Cash > (Cash - amount))
+            if (Cash < (Cash - amount))
             {
                 MyBet = new Bet(this, amount, whichDog);
                 Cash -= MyBet.Amount;
