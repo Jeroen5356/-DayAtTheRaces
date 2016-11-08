@@ -17,7 +17,6 @@ namespace ADayAtTheRaces
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            //commit 13:11
         }
     }
 }

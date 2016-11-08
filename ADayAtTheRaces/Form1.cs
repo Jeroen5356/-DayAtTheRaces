@@ -109,7 +109,7 @@ namespace ADayAtTheRaces
 
         private void betsButton_Click(object sender, EventArgs e)
         {
-            selected.MyLabel = 
+            //selected.MyLabel = 
         }
     }
 }
