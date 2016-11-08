@@ -11,22 +11,24 @@ namespace ADayAtTheRaces
     class Human
     {
         public string Name;
-        public int MyBet;
+        public Bet MyBet;
         public int Cash;
         public RadioButton MyRadioButton;
         public Label MyLabel;
+        public Label MyOutcomeLabel;
 
         public void UpdateLabel()
         {
-            //MyLabel.Text = //bet.description
             MyRadioButton.Text = Name + "has " + Cash + " pounds avaliable.";
         }
 
-        public bool PlaceBet()
+        public bool PlaceBet(int amount, Dog whichDog, Human bettor)
         {
-            if (Cash > (Cash - MyBet))
+            if (Cash > (Cash - amount))
             {
-                Cash -= MyBet;
+                MyBet = new Bet(this, amount, whichDog);
+                Cash -= MyBet.Amount;
+                MyLabel.Text = MyBet.GetDescription();
                 return true;
             }
             else
@@ -34,20 +36,12 @@ namespace ADayAtTheRaces
                 MessageBox.Show("You cannot place a bet of this amount.");
                 return false;
             }
-            
-
         }
 
         public void ClearBet()
         {
-            MyBet = 0;
-        }
-
-        public void Collect()
-        {
-            ClearBet();
-            Cash -= MyBet; //loss
-            Cash += MyBet; //win
+            MyBet = null;
+            MyLabel.Text = "";
         }
     }
 }
