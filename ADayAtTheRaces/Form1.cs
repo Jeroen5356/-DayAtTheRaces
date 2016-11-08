@@ -19,10 +19,10 @@ namespace ADayAtTheRaces
         public Form1()
         {
             InitializeComponent();
-            
-            guys[0] = new Human() { Name = "Joe", Cash = 50, MyLabel = joesInfo, MyRadioButton = joesRB, MyOutcomeLabel = joesOutcomeLabel };
-            guys[1] = new Human() { Name = "Bob", Cash = 75, MyLabel = bobsInfo, MyRadioButton = bobsRB, MyOutcomeLabel = bobsOutcomeLabel };
-            guys[2] = new Human() { Name = "Al", Cash = 45, MyLabel = alsInfo, MyRadioButton = alsRB, MyOutcomeLabel = AlsOutcomeLabel };
+
+            guys[0] = new Human("Joe", 50, joesInfo, joesRB, joesOutcomeLabel);
+            guys[1] = new Human("Bob", 75, bobsInfo, bobsRB, bobsOutcomeLabel);
+            guys[2] = new Human("Al", 45, alsInfo, alsRB, AlsOutcomeLabel);
 
             raceDogs[1] = new Dog() { MyPictureBox = pictureBox1, LaneNumber = 1 };
             raceDogs[2] = new Dog() { MyPictureBox = pictureBox2, LaneNumber = 2 };
@@ -44,46 +44,55 @@ namespace ADayAtTheRaces
         }
 
         public void raceButton_Click(object sender, EventArgs e) {
-            for (int y = 1; raceDogs[y].Location < raceDogs[y].RacetrackLength; y++) {
-                raceDogs[y].Run();
-                if (y == 4)
+            if (guys[2].checkForThreeBets())
+            {
+                for (int y = 1; raceDogs[y].Location < raceDogs[y].RacetrackLength; y++)
                 {
-                    y = 0;
+                    raceDogs[y].Run();
+                    if (y == 4)
+                    {
+                        y = 0;
+                    }
+                }
+                Dog compareDogs;
+                Dog compareDogs2;
+
+                if (raceDogs[1].Location < raceDogs[2].Location)
+                    compareDogs = raceDogs[2];
+                else
+                    compareDogs = raceDogs[1];
+
+                if (raceDogs[3].Location < raceDogs[4].Location)
+                    compareDogs2 = raceDogs[4];
+                else
+                    compareDogs2 = raceDogs[3];
+                if (compareDogs.Location > compareDogs2.Location)
+                    ultimateWinner = compareDogs;
+                else
+                    ultimateWinner = compareDogs2;
+
+                MessageBox.Show("The winning dog is in lane number " + ultimateWinner.LaneNumber + ".");
+                foreach (Human guy in guys)
+                {
+                    guy.MyBet.PayOut(ultimateWinner);
+                    guy.ClearBet();
+                }
+                //Get the updated information from the bettors
+                joesRB.Text = guys[0].Name + " has " + guys[0].Cash + " bucks";
+                bobsRB.Text = guys[1].Name + " has " + guys[1].Cash + " bucks";
+                alsRB.Text = guys[2].Name + " has " + guys[2].Cash + " bucks";
+
+                //Place the dogs back to their starting positions
+                for (int i = 1; i <= 4; i++)
+                {
+                    raceDogs[i].TakeStartingPositions();
                 }
             }
-            Dog compareDogs;
-            Dog compareDogs2;
-
-            if (raceDogs[1].Location < raceDogs[2].Location)
-                compareDogs = raceDogs[2];
             else
-                compareDogs = raceDogs[1];
-
-            if (raceDogs[3].Location < raceDogs[4].Location)
-                compareDogs2 = raceDogs[4];
-            else
-                compareDogs2 = raceDogs[3];
-            if (compareDogs.Location > compareDogs2.Location)
-                ultimateWinner = compareDogs;
-            else
-                ultimateWinner = compareDogs2;
-
-            MessageBox.Show("The winning dog is in lane number " + ultimateWinner.LaneNumber + ".");
-            foreach (Human guy in guys)
             {
-                guy.MyBet.PayOut(ultimateWinner);
-                guy.ClearBet();
+                MessageBox.Show("All the guys should place a bet, this game is not for pussies");
             }
-            //Get the updated information from the bettors
-            joesRB.Text = guys[0].Name + " has " + guys[0].Cash + " bucks";
-            bobsRB.Text = guys[1].Name + " has " + guys[1].Cash + " bucks";
-            alsRB.Text = guys[2].Name + " has " + guys[2].Cash + " bucks";
             
-            //Place the dogs back to their starting positions
-            for (int i = 1; i <= 4 ; i++)
-            {
-                raceDogs[i].TakeStartingPositions();
-            }
         }
 
         private void joesRB_CheckedChanged(object sender, EventArgs e)
@@ -106,7 +115,7 @@ namespace ADayAtTheRaces
 
         private void betsButton_Click(object sender, EventArgs e)
         {
-                selected.PlaceBet(Convert.ToInt16(betAmountUpDown.Value), raceDogs[Convert.ToInt16(laneUpDown.Value)], selected);
+                selected.PlaceBet(Convert.ToInt16(betAmountUpDown.Value), raceDogs[Convert.ToInt16(laneUpDown.Value)]);
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ADayAtTheRaces
 {
@@ -12,20 +11,20 @@ namespace ADayAtTheRaces
         public int Amount;
         public Dog WhichDog;
         public Human Bettor;
-        public int Totalbets;
 
         public Bet(Human bettor, int amount, Dog whichDog)
         {
             Bettor = bettor;
             Amount = amount;
             WhichDog = whichDog;
-            Totalbets++;
         }
 
         public string GetDescription()
         {
             return Bettor.Name + " bets " + Amount + " on dog #" + WhichDog.LaneNumber;
         }
+
+        
 
         public void PayOut(Dog winner)
         {
