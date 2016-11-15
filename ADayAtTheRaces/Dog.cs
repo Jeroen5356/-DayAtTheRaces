@@ -18,17 +18,21 @@ namespace ADayAtTheRaces
         public int StartingPositionY;
         public int Location = 0;
         public int LaneNumber;
+        private Random random;
+        private int paces;
 
         public void Run()
         {
             StartingPositionX = MyPictureBox.Location.X;
             StartingPositionY = MyPictureBox.Location.Y;
-            Random random = new Random();
-            int paces = random.Next(0,30);
-            MyPictureBox.Left += paces;
-            Location = MyPictureBox.Left;
+
+            random = new Random();
+            paces = random.Next(0,30);
+
+            Location = MyPictureBox.Left + paces;
             System.Threading.Thread.Sleep(50);
         }
+
         public void TakeStartingPositions()
         {
             MyPictureBox.Location = new Point(StartingPositionX, StartingPositionY);
