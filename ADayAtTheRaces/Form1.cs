@@ -49,27 +49,31 @@ namespace ADayAtTheRaces
                 for (int y = 1; raceDogs[y].Location < raceDogs[y].RacetrackLength; y++)
                 {
                     raceDogs[y].Run();
+                    if (raceDogs[y].Location >= raceDogs[y].RacetrackLength)
+                    {
+                        ultimateWinner = raceDogs[y];
+                    }
                     if (y == 4)
                     {
                         y = 0;
                     }
                 }
-                Dog compareDogs;
-                Dog compareDogs2;
+                //Dog compareDogs;
+                //Dog compareDogs2;
 
-                if (raceDogs[1].Location < raceDogs[2].Location)
-                    compareDogs = raceDogs[2];
-                else
-                    compareDogs = raceDogs[1];
+                //if (raceDogs[1].Location < raceDogs[2].Location)
+                //    compareDogs = raceDogs[2];
+                //else
+                //    compareDogs = raceDogs[1];
 
-                if (raceDogs[3].Location < raceDogs[4].Location)
-                    compareDogs2 = raceDogs[4];
-                else
-                    compareDogs2 = raceDogs[3];
-                if (compareDogs.Location > compareDogs2.Location)
-                    ultimateWinner = compareDogs;
-                else
-                    ultimateWinner = compareDogs2;
+                //if (raceDogs[3].Location < raceDogs[4].Location)
+                //    compareDogs2 = raceDogs[4];
+                //else
+                //    compareDogs2 = raceDogs[3];
+                //if (compareDogs.Location > compareDogs2.Location)
+                //    ultimateWinner = compareDogs;
+                //else
+                //    ultimateWinner = compareDogs2;
 
                 MessageBox.Show("The winning dog is in lane number " + ultimateWinner.LaneNumber + ".");
                 foreach (Human guy in guys)
