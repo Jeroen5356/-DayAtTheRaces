@@ -14,13 +14,13 @@ namespace ADayAtTheRaces
         public Label MyOutcomeLabel;
         public static int Totalbets;
 
-        public Human(string name, int cash, Label mylabel, RadioButton myradiobutton, Label myoutcomelabel)
+        public Human(string name, int cash, Label myLabel, RadioButton myRadioButton, Label myOutcomeLabel)
         {
             Name = name;
             Cash = cash;
-            MyLabel = mylabel;
-            MyRadioButton = myradiobutton;
-            MyOutcomeLabel = myoutcomelabel;
+            MyLabel = myLabel;
+            MyRadioButton = myRadioButton;
+            MyOutcomeLabel = myOutcomeLabel;
         }
 
         public void UpdateLabel()
