@@ -48,13 +48,9 @@ namespace ADayAtTheRaces
         public bool checkForThreeBets()
         {
             if (Totalbets == 3)
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
 
         public void ClearBet()
