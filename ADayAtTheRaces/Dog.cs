@@ -16,10 +16,9 @@ namespace ADayAtTheRaces
         public PictureBox MyPictureBox;
         public int StartingPositionX;
         public int StartingPositionY;
-        public int Location = 0;
         public int LaneNumber;
         private Random random;
-        private int paces;
+        private int step;
 
         public void Run()
         {
@@ -27,9 +26,9 @@ namespace ADayAtTheRaces
             StartingPositionY = MyPictureBox.Location.Y;
 
             random = new Random();
-            paces = random.Next(0,30);
+            step = random.Next(0,30);
 
-            Location = MyPictureBox.Left + paces;
+            MyPictureBox.Left += step;
             System.Threading.Thread.Sleep(50);
         }
 
@@ -37,7 +36,6 @@ namespace ADayAtTheRaces
         {
             MyPictureBox.Location = new Point(StartingPositionX, StartingPositionY);
             MyPictureBox.Left = 45;
-            Location = 0;
         }
     }
 }

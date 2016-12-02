@@ -24,8 +24,6 @@ namespace ADayAtTheRaces
             return Bettor.Name + " bets " + Amount + " on dog #" + WhichDog.LaneNumber;
         }
 
-        
-
         public void PayOut(Dog winner)
         {
             if(winner == WhichDog)

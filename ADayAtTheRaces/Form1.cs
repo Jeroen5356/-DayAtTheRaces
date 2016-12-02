@@ -46,10 +46,10 @@ namespace ADayAtTheRaces
         public void raceButton_Click(object sender, EventArgs e) {
             if (guys[2].checkForThreeBets())
             {
-                for (int y = 1; raceDogs[y].Location <= raceDogs[y].RacetrackLength; y++)
+                for (int y = 1; raceDogs[y].MyPictureBox.Left <= raceDogs[y].RacetrackLength; y++)
                 {
                     raceDogs[y].Run();
-                    if (raceDogs[y].Location >= raceDogs[y].RacetrackLength)
+                    if (raceDogs[y].MyPictureBox.Left >= raceDogs[y].RacetrackLength)
                     {
                         ultimateWinner = raceDogs[y];
                     }
